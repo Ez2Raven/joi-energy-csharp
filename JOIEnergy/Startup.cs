@@ -67,7 +67,11 @@ namespace JOIEnergy
 
             app.UseMvc();
         }
-
+        
+        /// <summary>
+        /// Generates associated readings for each smart meter.
+        /// </summary>
+        /// <returns></returns>
         private Dictionary<string, List<ElectricityReading>> GenerateMeterElectricityReadings() {
             var readings = new Dictionary<string, List<ElectricityReading>>();
             var generator = new ElectricityReadingGenerator();
@@ -79,7 +83,10 @@ namespace JOIEnergy
             }
             return readings;
         }
-
+        
+        /// <summary>
+        /// Mapping of resident's smart meter Id to electricity supplier
+        /// </summary>
         public Dictionary<String, Supplier> SmartMeterToPricePlanAccounts
         {
             get

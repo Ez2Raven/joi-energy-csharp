@@ -10,6 +10,13 @@ namespace JOIEnergy.Generator
         {
 
         }
+        
+        /// <summary>
+        /// Generates n number of <see cref="ElectricityReading"/> with a <see cref="Random"/> amount of kilowatts
+        /// in decrement of 10 secs, sorted in time ascending order.
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public List<ElectricityReading> Generate(int number)
         {
             var readings = new List<ElectricityReading>();
